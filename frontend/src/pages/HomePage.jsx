@@ -14,7 +14,7 @@ function HomePage() {
     const fetchTexts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5001/api/texts');
+        const response = await axios.get('https://ready2read-api.onrender.com/api/texts');
         setTexts(response.data);
         setError(null);
       } catch (err) {
