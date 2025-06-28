@@ -1,0 +1,65 @@
+/* frontend/src/pages/HomePage.css */
+
+/* Sayfanın genel konteyneri: İçeriği ortalar ve genişliği sınırlar */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* İçeriği dikeyde ortalar */
+  align-items: center;     /* İçeriği yatayda ortalar */
+  min-height: 90vh;   
+
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.homepage-container h1 {
+  font-size: 2.5rem; /* 40px */
+  margin-bottom: 40px;
+  color: #6a7683; /* Koyu mavi-gri bir renk */
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Metin kartlarının bulunduğu grid yapısı */
+.text-list {
+  display: grid;
+  /* Otomatik olarak sığdığı kadar sütun oluşturur. 
+     Her kart en az 300px olur, yer varsa büyür. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px; /* Kartlar arası boşluk */
+  text-align: left;
+}
+
+/* Her bir metni temsil eden kart (Link bileşeni) */
+.text-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Kartın üzerine gelince hafifçe büyümesi ve gölgesinin artması */
+.text-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #3498db; /* Mavi bir başlık rengi */
+  font-size: 1.25rem;
+}
+
+.text-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7f8c8d; /* Gri bir metin rengi */
+}

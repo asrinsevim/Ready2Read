@@ -1,0 +1,189 @@
+/* frontend/src/pages/KelimePratikSayfasi.css - DÜZENLENMİŞ SON HALİ */
+
+/* ANA KAPSAYICI */
+.vocab-page-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px; /* Biraz daha daraltarak daha toplu bir görünüm */
+  min-height: 85vh;
+  margin: 60px auto;
+  padding: 80px 40px 40px 40px; /* Üst, Sağ/Sol, Alt - Tek ve temiz padding */
+  background-color: #1b3358; /* Seçtiğiniz koyu mavi arka plan */
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* İÇERİĞİ ORTALAYAN KAPSAYICI */
+.vocab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* BAŞLIK STİLİ */
+.vocab-content h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  max-width: 85%;
+  margin: 0 0 40px 0; /* Sadece alt boşluk verdik */
+}
+
+.vocab-content h1 span {
+  display: block;
+  font-size: 1.2rem;
+  color: #c5d2e2; /* Daha uyumlu soluk bir renk */
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/* --- BUTONLAR İÇİN GÖRSEL HİYERARŞİ --- */
+
+/* 1. İkincil Butonlar (Geri Dön ve Previous/Next) */
+.back-to-home-button,
+.navigation button {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.back-to-home-button:hover,
+.navigation button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navigation button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* 2. Ana Eylem Butonu (Metni Oku) */
+.to-article-button {
+  padding: 12px 24px;
+  background-color: #f0f0f0; /* Dikkat çeken parlak renk */
+  color: #1b3358; /* Arka plan rengiyle uyumlu koyu yazı */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.to-article-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* --- BUTONLARIN KONUMLANDIRILMASI --- */
+
+.back-to-home-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 10;
+}
+
+.to-article-button {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+.navigation {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navigation span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+
+/******************************************/
+/* MOBİL UYUMLULUK (RESPONSIVE) KURALLARI   */
+/******************************************/
+@media (max-width: 768px) {
+  .vocab-page-container {
+    padding: 80px 15px 30px 15px;
+    margin: 20px 10px;
+    min-height: unset;
+  }
+
+  .vocab-content h1 {
+    font-size: 1.5rem;
+    max-width: 100%;
+  }
+
+  .vocab-content h1 span {
+    font-size: 1rem;
+  }
+
+  .back-to-home-button,
+  .to-article-button {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .to-article-button {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .back-to-home-button {
+    top: 20px;
+    right: 20px;
+  }
+
+  .flashcard {
+    width: 90vw;
+    height: 55vw;
+    max-width: 320px;
+    max-height: 220px;
+  }
+
+  .navigation button {
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
