@@ -27,7 +27,7 @@ function KelimePratikSayfasi() {
         setLoading(true); // İstek başlarken yükleniyor durumunu aç
 
         // Backend'deki API endpoint'ine istek at
-        const response = await axios.get(`http://localhost:5001/api/texts/${id}`); // https://ready2read-api.onrender.com
+        const response = await axios.get(`https://ready2read-api.onrender.com/api/texts/${id}`); // http://localhost:5001
         
         // Gelen veriyi state'e kaydet
         setTextData(response.data);

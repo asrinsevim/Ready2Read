@@ -16,7 +16,7 @@ function ArticlePage() {
     const fetchText = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://ready2read-api.onrender.com/api/texts/${id}`);
+        const response = await axios.get(`https://ready2read-api.onrender.com/api/texts/${id}`);  // https://ready2read-api.onrender.com
         setTextData(response.data);
         setError(null);
       } catch (err) {
