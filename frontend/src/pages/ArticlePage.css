@@ -39,3 +39,20 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+
+@media (max-width: 768px) {
+  .article-container {
+    margin: 0px;
+  }
+
+  .article-content p {
+    font-size: 1rem;    /* Yazı boyutu mobilde iyi, değiştirmeyebiliriz */
+    line-height: 1.65;  /* Satır aralığını 1.8'den 1.65'e düşürdük */
+ /* ÖNEMLİ TAVSİYE: Sola yaslamak daha okunaklıdır */
+  }
+
+  .article-title {
+    font-size: 1.8rem; /* Başlığı da biraz ayarlayalım */
+  }
+}  

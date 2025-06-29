@@ -1,0 +1,18 @@
+.site-footer {
+  padding: 20px 40px;
+  background-color: #2c3e50; /* Koyu bir footer rengi */
+  color: #bdc3c7; /* Soluk yazı rengi */
+  text-align: center;
+  margin-top: auto; /* Bu, içeriğin az olduğu sayfalarda footer'ı aşağıda tutar */
+}
+.site-footer p {
+  margin: 0;
+}
+.site-footer a {
+  color: #ffffff; /* Link rengi beyaz */
+  font-weight: bold;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}

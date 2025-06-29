@@ -14,11 +14,11 @@ function HomePage() {
     const fetchTexts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('https://ready2read-api.onrender.com/api/texts');
+        const response = await axios.get('http://localhost:5001/api/texts'); // https://ready2read-api.onrender.com
         setTexts(response.data);
         setError(null);
       } catch (err) {
-        setError('Metinler yüklenirken bir sorun oluştu.');
+        setError('An error occurred while loading texts.');
         console.error(err);
       } finally {
         setLoading(false);
@@ -28,7 +28,7 @@ function HomePage() {
     fetchTexts();
   }, []);
 
-  if (loading) return <div>Yükleniyor...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error) return <div style={{ color: 'red' }}>{error}</div>;
 
   // JSX kısmını className'ler ile güncelliyoruz

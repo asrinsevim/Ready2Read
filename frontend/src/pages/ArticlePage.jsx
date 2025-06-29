@@ -20,7 +20,7 @@ function ArticlePage() {
         setTextData(response.data);
         setError(null);
       } catch (err) {
-        setError('Metin yüklenirken bir sorun oluştu.');
+        setError('An error occurred while loading the text.');
         console.error(err);
       } finally {
         setLoading(false);

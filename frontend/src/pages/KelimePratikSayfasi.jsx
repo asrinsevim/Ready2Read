@@ -27,14 +27,14 @@ function KelimePratikSayfasi() {
         setLoading(true); // İstek başlarken yükleniyor durumunu aç
 
         // Backend'deki API endpoint'ine istek at
-        const response = await axios.get(`https://ready2read-api.onrender.com/api/texts/${id}`);
+        const response = await axios.get(`http://localhost:5001/api/texts/${id}`); // https://ready2read-api.onrender.com
         
         // Gelen veriyi state'e kaydet
         setTextData(response.data);
         setError(null); // Başarılı olursa eski hatayı temizle
       } catch (err) {
         // Hata olursa hata state'ini güncelle
-        setError('Metin yüklenirken bir sorun oluştu.');
+        setError('An error occurred while loading texts.');
         console.error(err);
       } finally {
         // İstek bitince (başarılı ya da hatalı) yükleniyor durumunu kapat
@@ -59,13 +59,13 @@ function KelimePratikSayfasi() {
 
   // 5. Yüklenme ve Hata durumları için arayüz göster
   if (loading) {
-    return <div style={{ textAlign: 'center', fontSize: '2em' }}>Yükleniyor...</div>;
+    return <div style={{ textAlign: 'center', fontSize: '2em' }}>Loading...</div>;
   }
   if (error) {
     return <div style={{ textAlign: 'center', color: 'red', fontSize: '2em' }}>{error}</div>;
   }
   if (!textData) {
-    return <div>Veri bulunamadı.</div>
+    return <div>Data not found.</div>
   }
 
   // 6. Veri başarıyla yüklendikten sonra gösterilecek ana arayüz

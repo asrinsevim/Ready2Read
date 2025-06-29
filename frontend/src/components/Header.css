@@ -1,0 +1,33 @@
+/* frontend/src/components/Header.css - GÜNCELLENMİŞ HALİ */
+
+/* Header'ın kendisi: Tam genişlik, arkaplan, gölge ve üste sabitleme */
+.site-header {
+  background-color: #d6e3f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 10px 0; /* Dikey iç boşluk */
+  width: 100%;/* Sayfa kaydırıldığında üstte sabit kalır (opsiyonel ama şık) */
+  top: 0;
+  z-index: 1000; /* Diğer elementlerin üstünde kalmasını garantiler */
+}
+
+/* İçerik Konteyneri: Header içeriğini ortalar ve genişliğini sınırlar */
+.header-container {
+  max-width: 1200px; /* Anasayfa ve diğer sayfalarla aynı hizada olması için */
+  margin: 0 auto; /* Konteyneri yatayda ortalar */
+  padding: 0 20px; /* Yanlardan boşluk bırakır */
+  display: flex;
+  justify-content: space-between; /* Öğeleri iki uca yaslar (sağa menü eklenirse diye hazır) */
+  align-items: center; /* Dikeyde mükemmel ortalama sağlar */
+}
+
+/* Logo Linki */
+.logo-link {
+  display: flex; /* İçindeki resmi dikeyde ortalamak için */
+  align-items: center;
+}
+
+/* Logonun kendisi: Boyutunu artırıyoruz */
+.logo-image {
+  height: 50px; /* Yüksekliği 40px'ten 50px'e çıkardık */
+  width: auto; /* Genişlik orantılı kalsın */
+}
