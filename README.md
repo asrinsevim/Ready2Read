@@ -6,7 +6,7 @@
 
 An interactive web application designed to simplify reading English texts by pre-teaching the necessary vocabulary before you begin.
 
-**Live Site:** [https://ready2read-app.vercel.app](https://ready2read-app.vercel.app) *(Replace with your actual Vercel link)*
+**Live Site:** [https://ready2read-app.vercel.app](https://ready2read-app.vercel.app) 
 
 ---
 
